@@ -1,0 +1,18 @@
+
+include LICENSE.txt *.md *.py
+
+exclude .gitlab-ci.yml
+exclude tox.ini
+
+prune scripts
+prune app_icons
+
+graft blueapps
+graft blueapps/conf/project_template
+graft blueapps/conf/app_template
+graft unittests
+graft unittests/mako_template
+
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude .DS_Store
