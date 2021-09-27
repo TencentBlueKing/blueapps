@@ -41,9 +41,6 @@ INSTALLED_APPS = (
     + INSTALLED_APPS[INSTALLED_APPS.index("bkoauth") + 1 :]
 )
 
-# REMOTE_STATIC_URL
-REMOTE_STATIC_URL = "%sremote/" % STATIC_URL
-
 # 请求官方 API 默认版本号，可选值为："v2" 或 ""；其中，"v2"表示规范化API，
 # ""表示未规范化API.如果外面设置了该值则使用设置值,否则默认使用v2
 DEFAULT_BK_API_VER = locals().get("DEFAULT_BK_API_VER", "v2")
@@ -139,3 +136,7 @@ else:  # V3
     # 蓝鲸登陆页面
     BK_LOGIN_URL = os.getenv("BK_LOGIN_URL", "%s/login" % BK_PAAS_HOST).rstrip("/")
     BK_LOGIN_INNER_URL = os.getenv("BK_LOGIN_INNER_URL", "%s/login" % BK_PAAS_INNER_HOST).rstrip("/")
+
+
+# REMOTE_STATIC_URL
+REMOTE_STATIC_URL = "%sremote/" % STATIC_URL
