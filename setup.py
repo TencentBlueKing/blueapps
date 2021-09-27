@@ -61,7 +61,7 @@ setup(
         "whitenoise==3.3.0",
 
         # jwt
-        "pycrypto==2.6.1",
+        "pyCryptodome==3.9.7",
         "PyJWT==1.7.1",
         "cryptography==2.7",
     ],
